@@ -1,2 +1,2 @@
 # Auto detect text files and perform LF normalization
-*.cs linguist-detectable=true
+*.cshtml linguist-detectable=false
