@@ -1,0 +1,19 @@
+@{
+    ViewBag.title="Başvuru Durumu";
+}
+@model UserInfo
+<main class="text-center">
+
+
+<h1 class="h4">Başvuru Durumu</h1>
+
+@if(Model.willattend==true){
+  <p>Teşekkürler,@Model.name Toplantıya sizinle birlikte @ViewBag.usercount kişi katılıyor</p>
+  <a class="btn btn-sm btn-outline-primary" href="/meeting/list">Katılımcıları Listele</a>
+}else{
+    <p>@Model.name, katılmadığından dolayı üzgünüz.</p>
+    <a class="btn btn-sm btn-outline-primary" href="/meeting/apply">Başvuru Formu</a>
+}
+
+</main>
+

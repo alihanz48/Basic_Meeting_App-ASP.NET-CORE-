@@ -1,0 +1,18 @@
+@model UserInfo
+@{
+    ViewBag.title="Kullanıcı Detayı";
+    var className=Model.willattend==true?"primary":"danger";
+}
+
+<main>
+    <h1 class="h4">Başvuru Detayı :</h1>
+    <p>
+        <span class="badge text-bg-@className">
+            @(Model.willattend==true?"Katılıyor":"Katılmıyor")
+        </span>
+    </p>
+    <p>İsim : @Model.name</p>
+    <p>Email : @Model.email</p>
+    <p>Telefon : @Model.phone</p>
+    <a asp-controller="Meeting" asp-action="List" class="btn btn-outline-@className">Katılımcı Listesi</a>
+</main>
